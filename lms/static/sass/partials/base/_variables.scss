@@ -1,0 +1,9 @@
+@import 'lms/static/sass/partials/base/variables';
+
+$header-bg: white;
+$container-bg: white;
+$body-bg: #fbfbf9;
+
+$link-color: #050562;
+$link-color-d1: $link-color;
+$link-hover: darken($link-color, 10%);

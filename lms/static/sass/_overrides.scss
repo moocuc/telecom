@@ -1,0 +1,176 @@
+body {
+  margin: 0px !important;
+}
+
+.header-global{
+  border-bottom: 4px solid #050562 !important;
+}
+
+ol.nav-global>li>a {
+  border-bottom: 4px solid #00468c;
+  padding-bottom: 10px !important;
+  font-size: 18px;
+}
+
+.dashboard .my-courses .course .details .enter-course, .dashboard .my-courses .course .details .enter-course.archived {
+  border: 1px solid $link-color !important;
+  color: $link-color !important;
+  background-color: #fff !important;
+}
+.dashboard .my-courses .course .details .enter-course:hover, .dashboard .my-courses .course .details .enter-course.archived:hover {
+  color: #fff !important;
+  background-color: $link-color !important;
+}
+
+.header-global {
+  background: $header-bg !important;
+}
+
+.header-global .user {
+  margin-top: 4px;
+}
+
+.header-global .user .user-dropdown {
+  background: transparent !important;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 3px !important;
+}
+
+.header-global.slim .user .user-dropdown {
+  margin-top: 8px !important;
+}
+
+.header-global.slim .wrapper-header .wrapper-user-menu {
+  margin-top: 4px !important;
+}
+
+.header-global .user a.user-link {
+  box-shadow: none !important;
+}
+
+.header-global .user a.user-link:active {
+  background-color: transparent !important;
+}
+.dashboard .profile-sidebar {
+  border:none !important;
+}
+
+.home > header {
+	background: url('../telecom/images/cabecera.svg');
+	background-size: cover;
+	background-position: 50%;
+
+	.outer-wrapper {
+		padding-top: 150px;
+	    padding-bottom: 150px;
+	}
+}
+
+.home>header .title>hgroup h2 {
+  text-transform: none !important;
+}
+
+.user-image-frame {
+  display: none !important;
+}
+
+.header-global .user .user-link .label-username {
+  float: right;
+  margin: 13px 5px 15px 15px !important;
+}
+
+.heading-left {
+  text-align: left !important;
+}
+
+.heading-group > h1 > button {
+  letter-spacing: 0px !important;
+  margin-left: 5px !important;
+  text-shadow: 0 1px rgba(255,255,255,0.6) !important;
+  text-transform: none !important;
+  color: $link-color !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: 0 0 0 0 transparent !important;
+  padding: 12px 0 !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  font-size: 15px !important;
+}
+
+.window-wrap {
+    background-color: $container-bg;
+}
+
+.header-global.slim .course-header {
+    width: auto !important;
+}
+
+.header-global .user .user-link .label-username, .dropdown-menu-container .menu-title {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-width: 180px !important;
+}
+
+.tab a {
+    color: $gray-d1 !important;
+    @include transition(all $tmg-f3 linear 0s);
+}
+
+.tabs .tab a.active, .tab a:hover {
+    border-bottom-color: rgb(6, 86, 131) !important;
+    color: rgb(6, 86, 131) !important;
+}
+
+@media print {
+  .course-index {
+      display: none !important;
+  }
+
+  .header-global {
+      border-bottom: 1px solid #00468c !important;
+  }
+
+  footer#footer-edx-v3 {
+      display: none !important;
+  }
+
+  .container > div {
+      border: none !important;
+  }
+
+  .xmodule_display.xmodule_CapaModule div.problem .action {
+      display: none !important;
+  }
+
+  .course-content .bookmark-button-wrapper {
+      display: none !important;
+  }
+
+  .wrap-instructor-info .instructor-info-action {
+      display: none !important;
+  }
+
+  .container .courseware-search-bar {
+      display: none !important;
+  }
+
+  .course-wrapper .course-content .path, .course-wrapper .courseware-results-wrapper .path {
+      margin-top: -12px !important;
+      margin-bottom: 2px !important;
+  }
+
+  a, a:visited {
+      text-decoration: underline !important;
+  }
+
+  .xmodule_display.xmodule_CapaModule div.problem-progress {
+      display: none !important;
+  }
+
+  .course-wrapper .course-content .vert-mod .vert>.xblock-student_view {
+      padding: 0 !important;
+  }
+}

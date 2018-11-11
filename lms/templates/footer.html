@@ -1,0 +1,58 @@
+## mako
+<%!
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+## WARNING: These files are specific to edx.org and are not used in installations outside of that domain. Open edX users will want to use the file "footer.html" for any changes or overrides.
+<footer id="footer-edx-v3" role="contentinfo" aria-label="${_("Page Footer")}"
+  ## When rendering the footer through the branding API,
+  ## the direction may not be set on the parent element,
+  ## so we set it here.
+  % if bidi:
+    dir=${bidi}
+  % endif
+>
+    <h2 class="sr footer-about-title">${_("MOOC UC")}</h2>
+    <div class="footer-content-wrapper">
+      <div class="site-details">
+          ## The OpenEdX link may be hidden when this view is served
+          ## through an API to partner sites (such as marketing sites or blogs),
+          ## which are not technically powered by OpenEdX.
+          % if not hide_openedx_link:
+          <div class="openedx-link">
+            <a href="${footer['openedx_link']['url']}" title="${footer['openedx_link']['title']}">
+              <img src="${static.url("images/edx-openedx-logo-tag.svg")}" alt="${footer['openedx_link']['title']}" width="140">
+            </a>
+              % for item_num, link in enumerate(footer['legal_links'], start=1):
+                %if link['title'] == "Terms of Service":
+                    <a href="${link['url']}" style="font-size: 11px;margin-left: 6px;">${link['title']}</a>
+                %endif
+              % endfor
+          </div>
+          % endif
+      </div>
+    </div>
+</footer>
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if bidi == 'rtl':
+<%static:css group='style-lms-footer-edx-rtl'/>
+% else:
+<%static:css group='style-lms-footer-edx'/>
+% endif
+
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif
+% if footer_js_url:
+  <script type="text/javascript" src="${footer_js_url}"></script>
+% endif
