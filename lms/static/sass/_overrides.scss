@@ -3,7 +3,7 @@ body {
 }
 
 .header-global{
-  border-bottom: 4px solid #050562 !important;
+  border-bottom: 8px solid #222222 !important;
 }
 
 ol.nav-global>li>a {
@@ -55,6 +55,10 @@ ol.nav-global>li>a {
 }
 .dashboard .profile-sidebar {
   border:none !important;
+}
+
+.header-global .btn-login {
+  color: #222222;
 }
 
 .home > header {
