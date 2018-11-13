@@ -61,8 +61,12 @@ ol.nav-global>li>a {
   background-color: #d1173a !important;
 }
 
-.courses-container .courses .courses-listing .courses-listing-item .course-info {
+.courses-container {
   border-bottom: 8px solid #222222 !important;
+}
+
+.courses-container .courses .courses-listing .courses-listing-item .course-info {
+  border-bottom: 8px solid #d1173a !important;
 }
 
 .home > header {
