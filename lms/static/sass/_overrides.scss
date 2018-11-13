@@ -58,11 +58,23 @@ ol.nav-global>li>a {
 }
 
 .header-global .btn-login {
-  background-color: #d1173a !important;
+	background-color: #d1173a !important;
+	h3.title,
+      .instructions {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      .btn-login-action {
+        @extend %btn-secondary-grey-outline;
+        padding: ($baseline/10) ($baseline*0.75);
+        @include margin-left($baseline/4);
+      }
+    }
 }
 
-.courses-container {
-  border-bottom: 8px solid #222222 !important;
+.courses-container .courses .courses-listing .courses-listing-item {
+  margin: 0 0 0 0;
 }
 
 .courses-container .courses .courses-listing .courses-listing-item .course-info {
