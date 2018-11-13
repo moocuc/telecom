@@ -61,6 +61,10 @@ ol.nav-global>li>a {
   background-color: $link-color !important;
 }
 
+.courses-container .courses .courses-listing .courses-listing-item {
+  border-bottom: 8px solid #222222 !important;
+}
+
 .home > header {
 	background: url('../telecom/images/cabecera.svg');
 	background-size: cover;
